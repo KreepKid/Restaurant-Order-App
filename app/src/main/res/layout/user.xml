@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textAllCaps="false"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="318dp"
+        android:layout_height="251dp"
+        app:srcCompat="@drawable/pngfind_com_pizza_emoji_png_1101292_1_"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="221dp"
+        android:layout_height="164dp"
+        app:srcCompat="@drawable/pot_of_food"
+        tools:layout_editor_absoluteX="413dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="232dp"
+        android:layout_height="174dp"
+        app:srcCompat="@drawable/pngtreeenglish_breakfast_featured_fried_eggs_4111526"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="402dp" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:srcCompat="@drawable/slice_of_pizza"
+        tools:layout_editor_absoluteX="250dp"
+        tools:layout_editor_absoluteY="410dp" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="249dp"
+        android:layout_height="224dp"
+        app:srcCompat="@drawable/untitled_design_removebg_preview"
+        tools:layout_editor_absoluteX="214dp"
+        tools:layout_editor_absoluteY="750dp" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="429dp"
+        android:layout_height="411dp"
+        app:srcCompat="@drawable/order_delicious_removebg_preview"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="468dp" />
+
+</android.support.constraint.ConstraintLayout>
