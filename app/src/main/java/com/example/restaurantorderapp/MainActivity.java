@@ -1,10 +1,13 @@
 package com.example.restaurantorderapp;
 
+import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -16,16 +19,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ConstraintLayout home = (ConstraintLayout) findViewById(R.id.linearLayout0);
-        //setContentView(R.id.linearLayout0);
 
         Button sign = (Button) findViewById(R.id.signInButton);
+
+        TextInputEditText username = (TextInputEditText) findViewById(R.id.username);
+        TextInputEditText password = (TextInputEditText) findViewById(R.id.password);
 
         sign.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.user);
 
-                ImageView proceed = (ImageView) findViewById(R.id.imageView11);
+                String usernameText = username.toString();
+                String passwordText = password.toString();
+
+                //need to check usernameText on the database then if found, use intent
+
+                Intent intent = new Intent(getApplicationContext(),user.class);
+                startActivity(intent);
+
+                //setContentView(R.layout.user);
+
+                /*ImageView proceed = (ImageView) findViewById(R.id.imageView11);
 
                 proceed.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -34,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                         setContentView(R.layout.post_user);
 
                     }
-                });
+                });*/
             }
         });
 
