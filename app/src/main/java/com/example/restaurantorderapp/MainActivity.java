@@ -37,18 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),user.class);
                 startActivity(intent);
 
-                //setContentView(R.layout.user);
-
-                /*ImageView proceed = (ImageView) findViewById(R.id.imageView11);
-
-                proceed.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-
-                        setContentView(R.layout.post_user);
-
-                    }
-                });*/
             }
         });
 
