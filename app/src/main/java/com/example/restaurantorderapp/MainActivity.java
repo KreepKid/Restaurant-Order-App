@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout home = (ConstraintLayout) findViewById(R.id.linearLayout0);
 
         Button sign = (Button) findViewById(R.id.signInButton);
+        TextView newUserText = (TextView) findViewById(R.id.newUser);
 
         TextInputEditText username = (TextInputEditText) findViewById(R.id.username);
         TextInputEditText password = (TextInputEditText) findViewById(R.id.password);
@@ -35,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
                 //need to check usernameText on the database then if found, use intent
 
                 Intent intent = new Intent(getApplicationContext(),user.class);
+                startActivity(intent);
+
+            }
+        });
+
+        //if they clicked on the new user? sign up text
+
+        newUserText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), UserSignUp.class);
                 startActivity(intent);
 
             }

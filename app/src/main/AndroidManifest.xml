@@ -35,6 +35,11 @@
             android:parentActivityName=".user">
 
         </activity>
+
+        <activity android:name=".UserSignUp"
+            android:parentActivityName=".user">
+
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
