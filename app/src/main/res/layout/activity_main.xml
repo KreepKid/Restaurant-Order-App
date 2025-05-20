@@ -40,7 +40,6 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:hint="Username"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -55,7 +54,11 @@
         <android.support.design.widget.TextInputEditText
             android:id="@+id/username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/sym_action_email"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/control_checkable_material"
+            android:hint="Username" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -64,7 +67,6 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="Password"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -72,12 +74,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+        app:passwordToggleEnabled="true">
 
         <android.support.design.widget.TextInputEditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:drawableStart="@android:drawable/ic_lock_lock"
+            android:drawablePadding="6dp"
+            android:drawableTint="@color/control_checkable_material"
+            android:hint="Password"
+            android:password="true" />
     </android.support.design.widget.TextInputLayout>
 
     <TextView

@@ -12,6 +12,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
         <activity android:name=".MainActivity"
+            android:parentActivityName=".UserSelection"
             android:exported="false">
 
         </activity>
@@ -24,6 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".UserSelection"
+            android:exported="false" >
+
+        </activity>
+
         <activity
             android:name=".user"
             android:parentActivityName=".MainActivity">
@@ -38,6 +45,11 @@
 
         <activity android:name=".UserSignUp"
             android:parentActivityName=".user">
+
+        </activity>
+
+        <activity android:name=".StaffLogin"
+            android:parentActivityName=".UserSelection" >
 
         </activity>
 

@@ -12,21 +12,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class UserSignUp extends AppCompatActivity {
+public class StaffLogin extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_up_user);
-
-        TextView existingUser = (TextView) findViewById(R.id.existingUser);
-
-        existingUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.staff_main);
     }
 }

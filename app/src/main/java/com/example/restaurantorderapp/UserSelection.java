@@ -12,16 +12,25 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class UserSignUp extends AppCompatActivity {
+public class UserSelection extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sign_up_user);
+        setContentView(R.layout.staff_customer);
 
-        TextView existingUser = (TextView) findViewById(R.id.existingUser);
+        ImageView staff = (ImageView) findViewById(R.id.staffLogin);
+        ImageView customer = (ImageView) findViewById(R.id.customerLogin);
 
-        existingUser.setOnClickListener(new View.OnClickListener() {
+        staff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StaffLogin.class);
+                startActivity(intent);
+            }
+        });
+
+        customer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
