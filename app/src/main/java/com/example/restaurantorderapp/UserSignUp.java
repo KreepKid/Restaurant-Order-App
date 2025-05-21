@@ -21,6 +21,26 @@ public class UserSignUp extends AppCompatActivity {
 
         TextView existingUser = (TextView) findViewById(R.id.existingUser);
 
+        Button signUp = (Button) findViewById(R.id.signUpButton);
+
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //if successful and everything is in order -> take to home page
+
+                //code needed to check user input
+
+                signUp.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(getApplicationContext(), post_user.class);
+                        startActivity(intent);
+                    }
+                });
+
+            }
+        });
+
         existingUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

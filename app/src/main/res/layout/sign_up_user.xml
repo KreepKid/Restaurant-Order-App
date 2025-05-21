@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
 
     <android.support.design.widget.TextInputLayout
         android:id="@+id/textInputLayout7"
@@ -148,7 +148,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signUpButton"
         style="butto"
         android:layout_width="109dp"
         android:layout_height="46dp"
