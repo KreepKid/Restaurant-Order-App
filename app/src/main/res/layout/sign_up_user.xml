@@ -19,7 +19,7 @@
         app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayout7"
+        android:id="@+id/passwordNewInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="304dp"
         android:layout_height="58dp"
@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
+        app:layout_constraintTop_toBottomOf="@+id/emailNewInput">
 
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
@@ -40,7 +40,7 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/textInputLayout6"
+        android:id="@+id/emailNewInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="304dp"
         android:layout_height="58dp"
@@ -75,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/surnameNewInput"
             android:layout_width="match_parent"
             android:layout_height="43dp" />
     </android.support.design.widget.TextInputLayout>
@@ -121,6 +122,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/usernameNewInput"
             android:layout_width="305dp"
             android:layout_height="46dp"
             android:layout_marginTop="60dp" />
@@ -143,6 +145,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/nameNewInput"
             android:layout_width="match_parent"
             android:layout_height="43dp" />
     </android.support.design.widget.TextInputLayout>
@@ -158,6 +161,6 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout7" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordNewInput" />
 
 </android.support.constraint.ConstraintLayout>
