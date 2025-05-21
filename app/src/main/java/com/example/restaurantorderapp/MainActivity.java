@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String usernameText = username.toString();
-                String passwordText = password.toString();
+                String usernameText = username.getText().toString();
+                String passwordText = password.getText().toString();
 
                 //need to check usernameText on the database then if found, use intent
 
