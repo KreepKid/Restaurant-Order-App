@@ -18,5 +18,17 @@ public class StaffLogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.staff_main);
-    }
+
+        TextInputEditText staffID = (TextInputEditText) findViewById(R.id.staffID);
+        TextInputEditText staffPassword = (TextInputEditText) findViewById(R.id.staffPassword);
+        Button staffLoginButton = (Button) findViewById(R.id.staffLogInButton);
+
+        staffLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), StaffHomepage.class);
+                startActivity(intent);
+            }
+        });
+     }
 }

@@ -19,7 +19,6 @@ public class UserSignUp extends AppCompatActivity {
         TextInputEditText username = (TextInputEditText) findViewById(R.id.usernameNewInput);
         TextInputEditText name = (TextInputEditText) findViewById(R.id.nameNewInput);
         TextInputEditText surname = (TextInputEditText) findViewById(R.id.surnameNewInput);
-        TextInputEditText email = (TextInputEditText) findViewById(R.id.surnameNewInput);
         TextInputEditText password = (TextInputEditText) findViewById(R.id.passwordNewInput);
 
         TextView existingUser = (TextView) findViewById(R.id.existingUser);
@@ -41,7 +40,6 @@ public class UserSignUp extends AppCompatActivity {
                         usernameText = username.getText().toString();
                         nameText = name.getText().toString();
                         surnameText = surname.getText().toString();
-                        emailText = email.getText().toString();
                         passwordText = password.getText().toString();
 
                         //need to check the format of info entered by the user if it is valid

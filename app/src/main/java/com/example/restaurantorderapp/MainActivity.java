@@ -7,9 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
 
         ConstraintLayout home = (ConstraintLayout) findViewById(R.id.linearLayout0);
 
-        Button sign = (Button) findViewById(R.id.signInButton);
+        Button sign = (Button) findViewById(R.id.staffLogInButton);
         TextView newUserText = (TextView) findViewById(R.id.newUser);
 
-        TextInputEditText username = (TextInputEditText) findViewById(R.id.username);
-        TextInputEditText password = (TextInputEditText) findViewById(R.id.password);
+        TextInputEditText username = (TextInputEditText) findViewById(R.id.staffID);
+        TextInputEditText password = (TextInputEditText) findViewById(R.id.staffPassword);
 
         sign.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/signInButton"
+        android:id="@+id/staffLogInButton"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginTop="60dp"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/username"
+            android:id="@+id/staffID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@android:drawable/sym_action_email"
@@ -78,7 +78,7 @@
         app:passwordToggleEnabled="true">
 
         <android.support.design.widget.TextInputEditText
-            android:id="@+id/password"
+            android:id="@+id/staffPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@android:drawable/ic_lock_lock"
@@ -97,6 +97,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.459"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signInButton" />
+        app:layout_constraintTop_toBottomOf="@+id/staffLogInButton" />
 
 </android.support.constraint.ConstraintLayout>
