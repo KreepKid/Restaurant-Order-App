@@ -19,12 +19,11 @@
         app:layout_constraintTop_toBottomOf="@+id/signUpButton" />
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/passwordNewInput"
+        android:id="@+id/TextInput1"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="304dp"
         android:layout_height="58dp"
         android:layout_marginTop="5dp"
-        android:hint="Password"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -32,20 +31,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailNewInput">
+        app:layout_constraintTop_toBottomOf="@+id/textInput">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/passwordNewInput"
             android:layout_width="match_parent"
-            android:layout_height="43dp" />
+            android:layout_height="43dp"
+            android:hint="Password" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:id="@+id/emailNewInput"
+        android:id="@+id/textInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="304dp"
         android:layout_height="58dp"
         android:layout_marginTop="5dp"
-        android:hint="Email Address"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -55,8 +55,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
         <android.support.design.widget.TextInputEditText
+            android:id="@+id/emailNewInput"
             android:layout_width="match_parent"
-            android:layout_height="43dp" />
+            android:layout_height="43dp"
+            android:hint="Email Address" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -65,7 +67,6 @@
         android:layout_width="304dp"
         android:layout_height="58dp"
         android:layout_marginTop="5dp"
-        android:hint="Surname"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -77,7 +78,8 @@
         <android.support.design.widget.TextInputEditText
             android:id="@+id/surnameNewInput"
             android:layout_width="match_parent"
-            android:layout_height="43dp" />
+            android:layout_height="43dp"
+            android:hint="Surname" />
     </android.support.design.widget.TextInputLayout>
 
     <TextView
@@ -111,11 +113,12 @@
         android:layout_width="304dp"
         android:layout_height="58dp"
         android:layout_marginTop="24dp"
-        android:hint="Username"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
         app:boxCornerRadiusTopStart="15dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="35"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +128,8 @@
             android:id="@+id/usernameNewInput"
             android:layout_width="305dp"
             android:layout_height="46dp"
-            android:layout_marginTop="60dp" />
+            android:layout_marginTop="60dp"
+            android:hint="Username" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
@@ -134,7 +138,6 @@
         android:layout_width="304dp"
         android:layout_height="58dp"
         android:layout_marginTop="5dp"
-        android:hint="Name"
         app:boxCornerRadiusBottomEnd="15dp"
         app:boxCornerRadiusBottomStart="15dp"
         app:boxCornerRadiusTopEnd="15dp"
@@ -147,7 +150,8 @@
         <android.support.design.widget.TextInputEditText
             android:id="@+id/nameNewInput"
             android:layout_width="match_parent"
-            android:layout_height="43dp" />
+            android:layout_height="43dp"
+            android:hint="Name" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
@@ -161,6 +165,6 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordNewInput" />
+        app:layout_constraintTop_toBottomOf="@+id/TextInput1" />
 
 </android.support.constraint.ConstraintLayout>
