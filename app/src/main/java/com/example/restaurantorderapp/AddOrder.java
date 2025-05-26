@@ -1,8 +1,31 @@
 package com.example.restaurantorderapp;
 
+import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
+import android.support.design.widget.TextInputEditText;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class AddOrder extends AppCompatActivity {
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.create_order);
+    }
+}
+
+// After fixing the code below you can get rid / link it with the one above
+
+/*
     import android.content.Context;
 import android.os.AsyncTask;
-import org.json.JSONArray;
+    import android.os.Bundle;
+    import android.support.v7.app.AppCompatActivity;
+
+    import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -14,6 +37,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AddOrder {
+
+
 
     private static final String BASE_URL = "http://your-server-domain.com/";
 
@@ -114,5 +139,5 @@ public class AddOrder {
             }
         }.execute();
     }
-}
+}*/
 
