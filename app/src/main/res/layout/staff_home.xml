@@ -7,62 +7,52 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <android.support.design.widget.TextInputLayout
+    <TextView
+        android:id="@+id/staffProfile"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top"
+        android:layout_height="69dp"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="#0A000000"
+        android:backgroundTintMode="src_over"
+        android:bufferType="normal"
+        android:fontFamily="monospace"
+        android:gravity="center_vertical"
         android:outlineProvider="none"
-        app:boxBackgroundMode="outline"
-        app:hintAnimationEnabled="false">
+        android:text="Profile"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/staffProfile"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:layout_weight="1"
-            android:fontFamily="monospace"
-            android:outlineProvider="none"
-            android:text="Profile"
-            android:textSize="20sp" />
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
+    <TextView
+        android:id="@+id/staffCreateOrder"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="top"
+        android:layout_height="69dp"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="#0A000000"
+        android:backgroundTintMode="src_over"
+        android:bufferType="normal"
+        android:fontFamily="monospace"
+        android:gravity="center_vertical"
         android:outlineProvider="none"
-        app:boxBackgroundMode="outline">
+        android:text="Create New Order"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
 
-        <android.support.design.widget.TextInputEditText
-            android:id="@+id/createOrder"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:outlineProvider="none"
-            android:text="Create New Order"
-            android:textSize="20sp" />
-    </android.support.design.widget.TextInputLayout>
-
-    <android.support.design.widget.TextInputLayout
-        style="o"
+    <TextView
+        android:id="@+id/staffOrderHistory"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:boxBackgroundColor="#0A000000"
-        app:boxBackgroundMode="outline">
-
-        <android.support.design.widget.TextInputEditText
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="monospace"
-            android:outlineProvider="none"
-            android:text="Order History"
-            android:textSize="20sp" />
-
-    </android.support.design.widget.TextInputLayout>
+        android:layout_height="69dp"
+        android:background="@android:drawable/editbox_background"
+        android:backgroundTint="#0A000000"
+        android:backgroundTintMode="src_over"
+        android:bufferType="normal"
+        android:fontFamily="monospace"
+        android:gravity="center_vertical"
+        android:outlineProvider="none"
+        android:text="Order History"
+        android:textAlignment="textStart"
+        android:textSize="20sp" />
 
 </LinearLayout>

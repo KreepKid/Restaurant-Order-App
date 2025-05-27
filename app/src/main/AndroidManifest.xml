@@ -60,6 +60,21 @@
 
         </activity>
 
+        <activity android:name=".StaffProfile"
+            android:parentActivityName=".StaffHomepage" >
+
+        </activity>
+
+        <activity android:name=".StaffOrderHistory"
+            android:parentActivityName=".StaffHomepage" >
+
+        </activity>
+
+        <activity android:name="AddOrder"
+            android:parentActivityName=".StaffHomepage" >
+
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
