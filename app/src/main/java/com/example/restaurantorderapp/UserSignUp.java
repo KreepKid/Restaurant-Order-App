@@ -25,6 +25,10 @@ public class UserSignUp extends AppCompatActivity {
 
         Button signUp = (Button) findViewById(R.id.signUpButton);
 
+        String Username, Name, Surname, Password;
+
+
+
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +39,7 @@ public class UserSignUp extends AppCompatActivity {
                 signUp.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        //have to authenticate
                         String usernameText, nameText, surnameText, emailText, passwordText;
                         usernameText = username.getText().toString();
                         nameText = name.getText().toString();
