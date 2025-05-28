@@ -11,22 +11,24 @@ import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
 
-    String usernameText, nameText, surnameText, emailText, passwordText;
+    TextInputEditText username, name, surname,password;
+    String usernameText, nameText, surnameText, passwordText;
+    Button btnSignUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        TextInputEditText username = (TextInputEditText) findViewById(R.id.usernameNewInput);
-        TextInputEditText name = (TextInputEditText) findViewById(R.id.nameNewInput);
-        TextInputEditText surname = (TextInputEditText) findViewById(R.id.surnameNewInput);
-        TextInputEditText password = (TextInputEditText) findViewById(R.id.passwordNewInput);
-        Button signUp = (Button) findViewById(R.id.signUpButton);
+        username = (TextInputEditText) findViewById(R.id.usernameNewInput);
+        name = (TextInputEditText) findViewById(R.id.nameNewInput);
+        surname = (TextInputEditText) findViewById(R.id.surnameNewInput);
+        password = (TextInputEditText) findViewById(R.id.passwordNewInput);
+        btnSignUp = (Button) findViewById(R.id.signUpButton);
 
         //acts as login button navigation
         TextView existingUser = (TextView) findViewById(R.id.existingUser);
 
-        signUp.setOnClickListener(new View.OnClickListener() {
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //have to authenticate
@@ -35,14 +37,17 @@ public class Register extends AppCompatActivity {
                 surnameText = surname.getText().toString();
                 passwordText = password.getText().toString();
 
-                String task = "Register";
-                BackgroundTask backgroundWorker = new BackgroundTask(Register.this);
-                backgroundWorker.execute(task, usernameText, nameText, surnameText, passwordText);
+                String task = "register";
+                BackgroundTask backgroundTask = new BackgroundTask(Register.this);
+                backgroundTask.execute(task, usernameText, nameText, surnameText, passwordText);
                 finish();
 
                 //need to check the format of info entered by the user if it is valid
 
                 Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                //FIX Android Manifest!!!
+                //Intent intent = new Intent(getApplicationContext(), LoginWelcome.class);
+                //startActivity(intent);
             }
         });
 

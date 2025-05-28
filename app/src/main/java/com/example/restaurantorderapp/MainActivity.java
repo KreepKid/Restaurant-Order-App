@@ -19,26 +19,26 @@ public class MainActivity extends AppCompatActivity {
         ConstraintLayout home = (ConstraintLayout) findViewById(R.id.linearLayout0);
 
         TextView newUserText = (TextView) findViewById(R.id.newUser);
-        TextInputEditText Username = (TextInputEditText) findViewById(R.id.staffID);    //Username login TextInput for the user
-        TextInputEditText Password = (TextInputEditText) findViewById(R.id.staffPassword);  //Password login TextInput for the user
-        Button signIn = (Button) findViewById(R.id.btnCustSignIn);   //Button to click when signing-in
+        TextInputEditText etUsername = (TextInputEditText) findViewById(R.id.staffID);    //Username login TextInput for the user
+        TextInputEditText etPassword = (TextInputEditText) findViewById(R.id.staffPassword);  //Password login TextInput for the user
+        Button btnSignIn = (Button) findViewById(R.id.btnCustSignIn);   //Button to click when signing-in
 
-        signIn.setOnClickListener(new View.OnClickListener() {
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                usernameText = Username.getText().toString();
-                passwordText = Password.getText().toString();
+                usernameText = etUsername.getText().toString();
+                passwordText = etPassword.getText().toString();
 
-                String activity = "SignIn";
-                BackgroundTask backgroundWorker = new BackgroundTask(MainActivity.this);
+                String task = "login";
+                BackgroundTask backgroundTask = new BackgroundTask(MainActivity.this);
 
-                Username.setText("");
-                Password.setText("");
+                etUsername.setText("");
+                etPassword.setText("");
 
                 //execute code by passing mentioned params to
-                //BackgroundWorker class
-                backgroundWorker.execute(activity, usernameText, passwordText);
+                //BackgroundTask class
+                backgroundTask.execute(task, usernameText, passwordText);
             }
         });
 
