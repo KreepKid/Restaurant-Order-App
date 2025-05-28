@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F5">
+
+    <!-- Fullscreen Blue card container -->
+    <LinearLayout
+        android:id="@+id/blueCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#2F6FFF"
+        android:gravity="center">  <!-- Centering content -->
+
+        <!-- Customer Name TextView -->
+        <TextView
+            android:id="@+id/textCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Name"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Customer Surname TextView -->
+        <TextView
+            android:id="@+id/textCustomerSurname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Customer Surname"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- White right side circle overlay (if needed) -->
+    <View
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/white_circle" />
+
+</RelativeLayout>
