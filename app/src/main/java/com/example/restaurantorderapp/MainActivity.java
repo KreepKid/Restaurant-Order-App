@@ -18,17 +18,10 @@ public class MainActivity extends AppCompatActivity {
 
         ConstraintLayout home = (ConstraintLayout) findViewById(R.id.linearLayout0);
 
-
         TextView newUserText = (TextView) findViewById(R.id.newUser);
-
-        //Username login TextInput for the user
-        TextInputEditText Username = (TextInputEditText) findViewById(R.id.staffID);
-
-        //Password login TextInput for the user
-        TextInputEditText Password = (TextInputEditText) findViewById(R.id.staffPassword);
-
-        //Button to click when signing-in
-        Button signIn = (Button) findViewById(R.id.staffLogInButton);
+        TextInputEditText Username = (TextInputEditText) findViewById(R.id.staffID);    //Username login TextInput for the user
+        TextInputEditText Password = (TextInputEditText) findViewById(R.id.staffPassword);  //Password login TextInput for the user
+        Button signIn = (Button) findViewById(R.id.staffLogInButton);   //Button to click when signing-in
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //need to check usernameText on the database then if found, use intent
 
-                Intent intent = new Intent(getApplicationContext(),user.class);
+                Intent intent = new Intent(getApplicationContext(),UserSignUp.class);
                 startActivity(intent);
 
             }

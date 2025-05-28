@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#3F51B5">
 
     <TextView
-        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Staff member will create order here once logged in" />
+        android:text="Add new order"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextPlace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editdrawable"
+        android:padding="12dp"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restaurant"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/editdrawable"
+        android:padding="12dp"
+        android:textColor="#000000"/>
+
+    <Button
+        android:id="@+id/buttonCreateOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="#DA7903"
+        android:padding="16dp"
+        android:text="ADD YOUR ORDER"
+        android:textColor="#F2E6E6" />
+
 </LinearLayout>
