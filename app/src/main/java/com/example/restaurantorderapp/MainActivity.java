@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
                 passwordText = Password.getText().toString();
 
                 String activity = "SignIn";
-                BackgroundWorker backgroundWorker = new BackgroundWorker(MainActivity.this);
+                BackgroundTask backgroundWorker = new BackgroundTask(MainActivity.this);
 
                 Username.setText("");
                 Password.setText("");

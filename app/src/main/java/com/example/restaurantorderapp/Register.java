@@ -35,7 +35,7 @@ public class Register extends AppCompatActivity {
                 passwordText = password.getText().toString();
 
                 String activity = "Register";
-                BackgroundWorker backgroundWorker = new BackgroundWorker(Register.this);
+                BackgroundTask backgroundWorker = new BackgroundTask(Register.this);
                 backgroundWorker.execute(activity, usernameText, nameText, surnameText, passwordText);
                 finish();
 
