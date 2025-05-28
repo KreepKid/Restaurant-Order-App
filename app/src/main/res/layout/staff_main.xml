@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/staffLogInButton"
+        android:id="@+id/btnStaffSignIn"
         android:layout_width="88dp"
         android:layout_height="48dp"
         android:layout_marginTop="60dp"

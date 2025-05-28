@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
 
@@ -34,14 +35,14 @@ public class Register extends AppCompatActivity {
                 surnameText = surname.getText().toString();
                 passwordText = password.getText().toString();
 
-                String activity = "Register";
+                String task = "Register";
                 BackgroundTask backgroundWorker = new BackgroundTask(Register.this);
-                backgroundWorker.execute(activity, usernameText, nameText, surnameText, passwordText);
+                backgroundWorker.execute(task, usernameText, nameText, surnameText, passwordText);
                 finish();
 
                 //need to check the format of info entered by the user if it is valid
 
-                //Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
             }
         });
 

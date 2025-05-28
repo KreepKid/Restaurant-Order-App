@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         TextView newUserText = (TextView) findViewById(R.id.newUser);
         TextInputEditText Username = (TextInputEditText) findViewById(R.id.staffID);    //Username login TextInput for the user
         TextInputEditText Password = (TextInputEditText) findViewById(R.id.staffPassword);  //Password login TextInput for the user
-        Button signIn = (Button) findViewById(R.id.staffLogInButton);   //Button to click when signing-in
+        Button signIn = (Button) findViewById(R.id.btnCustSignIn);   //Button to click when signing-in
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override

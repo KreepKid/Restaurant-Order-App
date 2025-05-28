@@ -4,7 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
 
-    <activity
+    <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -34,20 +34,8 @@
 
         </activity>
 
-        <activity
-            android:name=".user"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
-
-        <activity
-            android:name=".ShopsHomepage"
-            android:parentActivityName=".user">
-
-        </activity>
-
         <activity android:name=".Register"
-            android:parentActivityName=".user">
+            android:parentActivityName=".MainActivity">
 
         </activity>
 
@@ -56,23 +44,25 @@
 
         </activity>
 
-        <activity android:name=".StaffHomepage"
+        <activity android:name=".StaffDashboard"
             android:parentActivityName=".StaffLogin" >
 
         </activity>
 
         <activity android:name=".StaffProfile"
-            android:parentActivityName=".StaffHomepage" >
+            android:parentActivityName=".StaffDashboard" >
 
         </activity>
 
         <activity android:name=".StaffOrderHistory"
-            android:parentActivityName=".StaffHomepage" >
+            android:parentActivityName=".StaffDashboard" >
 
         </activity>
 
         <activity android:name="AddOrder"
-            android:parentActivityName=".StaffHomepage" >
+            android:parentActivityName=".StaffDashboard">
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
