@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -26,8 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/editdrawable"
+        android:hint="Customer Name"
         android:padding="12dp"
-        android:textColor="#000000"/>
+        android:textColor="#000000" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,8 +43,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/editdrawable"
+        android:hint="Restaurant Name"
         android:padding="12dp"
-        android:textColor="#000000"/>
+        android:textColor="#000000" />
 
     <Button
         android:id="@+id/buttonCreateOrder"
@@ -52,6 +55,7 @@
         android:background="#DA7903"
         android:padding="16dp"
         android:text="ADD YOUR ORDER"
-        android:textColor="#F2E6E6" />
+        android:textColor="#FFFDFD"
+        tools:ignore="TextContrastCheck" />
 
 </LinearLayout>

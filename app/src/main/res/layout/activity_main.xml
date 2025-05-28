@@ -16,7 +16,6 @@
         android:ellipsize="none"
         android:outlineProvider="none"
         android:text="Sign In"
-        android:onClick="onClick"
         android:textColor="@color/white"
         android:textColorHint="@color/purple_200"
         app:layout_constraintEnd_toEndOf="parent"

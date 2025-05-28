@@ -1,31 +1,11 @@
 package com.example.restaurantorderapp;
 
-import android.content.Intent;
-import android.support.constraint.ConstraintLayout;
-import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-
-public class AddOrder extends AppCompatActivity {
-
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_order);
-    }
-}
-
-// After fixing the code below you can get rid / link it with the one above
-
-/*
-    import android.content.Context;
+import android.content.Context;
 import android.os.AsyncTask;
-    import android.os.Bundle;
-    import android.support.v7.app.AppCompatActivity;
 
-    import org.json.JSONArray;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -36,7 +16,18 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddOrder {
+public class AddOrder extends AppCompatActivity {
+
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.create_order);
+
+    }
+}
+
+// After fixing the code below you can get rid / link it with the one above
+
+/*public class AddOrder {
 
 
 
@@ -45,17 +36,17 @@ public class AddOrder {
     public interface OrderCallback {
         void onOrdersReceived(List<Order> orders);
         void onError(String message);
-    }
+    }*/
 
     public static class Order {
         private int Order_ID;
         private int Staff_ID;
-        private String Customer_name;
+        private String Username;
         private String Order_status;
         private String Order_time;
     }
 
-    public static void insertOrder(Context context, int Staff_ID, String Customer_name, OrderCallback callback) {
+    public static void insertOrder(Context context, int Staff_ID, String Username, OrderCallback callback) {
         new AsyncTask<Void, Void, String>() {
             @Override
             protected String doInBackground(Void... voids) {
@@ -65,7 +56,7 @@ public class AddOrder {
                     conn.setRequestMethod("POST");
                     conn.setDoOutput(true);
 
-                    String postData = "staff_id=" + Staff_ID + "&customer_name=" + Customer_name;
+                    String postData = "staff_id=" + Staff_ID + "&customer_name=" + Username;
 
                     try (OutputStream os = conn.getOutputStream()) {
                         byte[] input = postData.getBytes(StandardCharsets.UTF_8);
@@ -117,7 +108,7 @@ public class AddOrder {
                             Order order = new Order();
                             order.setOrderId(jsonObject.getInt("Order_ID"));
                             order.setStaffId(jsonObject.getInt("Staff_ID"));
-                            order.setCustomerName(jsonObject.getString("Customer_name"));
+                            order.setCustomerName(jsonObject.getString("Username"));
                             order.setOrderTime(jsonObject.getString("Order_time"));
                             order.setOrderStatus(jsonObject.getString("Order_status"));
                             orders.add(order);
@@ -139,5 +130,5 @@ public class AddOrder {
             }
         }.execute();
     }
-}*/
+}
 

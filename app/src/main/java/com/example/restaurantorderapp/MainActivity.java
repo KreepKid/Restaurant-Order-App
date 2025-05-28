@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    String usernameText,passwordText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,28 +27,29 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String usernameText = Username.getText().toString();
-                String passwordText = Password.getText().toString();
+                usernameText = Username.getText().toString();
+                passwordText = Password.getText().toString();
 
-                //need to check usernameText on the database then if found, use intent
+                String activity = "SignIn";
+                BackgroundWorker backgroundWorker = new BackgroundWorker(MainActivity.this);
 
-                Intent intent = new Intent(getApplicationContext(),UserSignUp.class);
-                startActivity(intent);
+                Username.setText("");
+                Password.setText("");
 
+                //execute code by passing mentioned params to
+                //BackgroundWorker class
+                backgroundWorker.execute(activity, usernameText, passwordText);
             }
         });
 
         //if they clicked on the new user? sign up text
-
-        /*newUserText.setOnClickListener(new View.OnClickListener() {
+        newUserText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Intent intent = new Intent(getApplicationContext(), UserSignUp.class);
+                Intent intent = new Intent(getApplicationContext(), Register.class);
                 startActivity(intent);
-
             }
-        });*/
+        });
 
 
 
