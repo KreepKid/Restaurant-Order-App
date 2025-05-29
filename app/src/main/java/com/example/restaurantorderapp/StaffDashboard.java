@@ -3,7 +3,6 @@ package com.example.restaurantorderapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,7 +23,7 @@ public class StaffDashboard extends AppCompatActivity {
             return;
         }
 
-        TextView staffProfile = findViewById(R.id.staffProfile);
+        TextView staffProfile = findViewById(R.id.customerProfile);
         TextView createOrder = findViewById(R.id.staffCreateOrder);
         TextView orderHistory = findViewById(R.id.staffOrderHistory);
 

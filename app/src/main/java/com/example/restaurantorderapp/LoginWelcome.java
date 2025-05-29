@@ -1,6 +1,8 @@
 package com.example.restaurantorderapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.content.SharedPreferences;
@@ -25,5 +27,14 @@ public class LoginWelcome extends AppCompatActivity {
 
         name.setText(custName);
         surname.setText(custSurname);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(getApplicationContext(), CustomerDashboard.class);
+                startActivity(intent);
+                finish();
+            }
+        }, 5500);
     }
 }
