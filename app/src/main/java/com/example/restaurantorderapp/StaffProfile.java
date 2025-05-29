@@ -11,9 +11,13 @@ import android.widget.TextView;
 
 public class StaffProfile extends AppCompatActivity {
 
+    int StaffID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.staff_profile);
+
+        StaffID = getIntent().getIntExtra("STAFF_ID", -1);
     }
 }

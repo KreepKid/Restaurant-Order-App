@@ -11,8 +11,12 @@ import android.widget.TextView;
 
 public class StaffOrderHistory extends AppCompatActivity {
 
+    int staffID;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.staff_order_history);
+
+        staffID = getIntent().getIntExtra("STAFF_ID", -1);
     }
 }
