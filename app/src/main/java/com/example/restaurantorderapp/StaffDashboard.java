@@ -5,41 +5,38 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class StaffDashboard extends AppCompatActivity {
 
+    int staffId;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.staff_dashboard);
 
-        TextView staffProfile = (TextView) findViewById(R.id.staffProfile);
-        TextView createOrder = (TextView) findViewById(R.id.staffCreateOrder);
-        TextView orderHistory = (TextView) findViewById(R.id.staffOrderHistory);
+        staffId = getIntent().getIntExtra("STAFF_ID", -1);
 
-        staffProfile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), StaffProfile.class);
-                startActivity(intent);
-            }
-        });
+        if (staffId == -1) {
+            Toast.makeText(this, "Error: Staff ID not passed!", Toast.LENGTH_LONG).show();
+            finish();
+            return;
+        }
 
-        createOrder.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), AddOrder.class);
-                startActivity(intent);
-            }
-        });
+        TextView staffProfile = findViewById(R.id.staffProfile);
+        TextView createOrder = findViewById(R.id.staffCreateOrder);
+        TextView orderHistory = findViewById(R.id.staffOrderHistory);
 
-        orderHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), StaffOrderHistory.class);
-                startActivity(intent);
-            }
-        });
-
-
+        staffProfile.setOnClickListener(view -> startWithStaffId(StaffProfile.class));
+        createOrder.setOnClickListener(view -> startWithStaffId(AddOrder.class));
+        orderHistory.setOnClickListener(view -> startWithStaffId(StaffOrderHistory.class));
     }
+
+    private void startWithStaffId(Class<?> destination) {
+        Intent intent = new Intent(getApplicationContext(), destination);
+        intent.putExtra("STAFF_ID", staffId);
+        startActivity(intent);
+    }
+
 }

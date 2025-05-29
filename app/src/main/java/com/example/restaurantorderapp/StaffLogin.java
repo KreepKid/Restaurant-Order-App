@@ -20,6 +20,7 @@ import java.net.URL;
 public class StaffLogin extends AppCompatActivity {
 
     TextInputEditText staffID, staffPassword;
+    String id;
     Button btnStaffSignIn;
 
     @Override
@@ -34,7 +35,7 @@ public class StaffLogin extends AppCompatActivity {
         btnStaffSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String id = staffID.getText().toString().trim();
+                id = staffID.getText().toString().trim();
                 String password = staffPassword.getText().toString().trim();
 
                 if (id.isEmpty() && password.isEmpty()) {
@@ -85,19 +86,26 @@ public class StaffLogin extends AppCompatActivity {
                 return "Error: " + e.getMessage();
             }
         }
-
         @Override
         protected void onPostExecute(String result) {
             try {
                 JSONObject response = new JSONObject(result);
                 if (response.getString("status").equals("success")) {
-                    String name = response.getString("Name");
+                    int staffId = response.optInt("Staff_ID", -1);
+                    String name = response.optString("Name", "Staff");
+
+                    if (staffId == -1) {
+                        Toast.makeText(StaffLogin.this, "Error: Staff ID not found", Toast.LENGTH_LONG).show();
+                        return;
+                    }
+
                     Toast.makeText(StaffLogin.this, "Welcome " + name, Toast.LENGTH_LONG).show();
 
-                    // We vayy to Staff Dashboard
                     Intent intent = new Intent(StaffLogin.this, StaffDashboard.class);
+                    intent.putExtra("STAFF_ID", staffId);
                     startActivity(intent);
                     finish();
+
                 } else {
                     Toast.makeText(StaffLogin.this, response.getString("message"), Toast.LENGTH_LONG).show();
                 }
@@ -105,5 +113,6 @@ public class StaffLogin extends AppCompatActivity {
                 Toast.makeText(StaffLogin.this, "Login failed: " + e.getMessage(), Toast.LENGTH_LONG).show();
             }
         }
+
     }
 }

@@ -71,25 +71,6 @@
             android:padding="12dp"
             android:textColorHint="#8B090404" />
 
-        <!-- Staff ID EditText with Label -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="Staff ID"
-            android:textColor="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/etStaffId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/rounded_rectangle_outline"
-            android:hint="Staff ID"
-            android:inputType="text"
-            android:padding="12dp"
-            android:textColorHint="#88100909" />
-
         <!-- Add Order Button -->
         <Button
             android:id="@+id/btnAddOrder"

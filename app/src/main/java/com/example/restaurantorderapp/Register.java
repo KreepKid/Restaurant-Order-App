@@ -37,6 +37,41 @@ public class Register extends AppCompatActivity {
                 surnameText = surname.getText().toString();
                 passwordText = password.getText().toString();
 
+                if(usernameText.isEmpty() && nameText.isEmpty() && surnameText.isEmpty() && passwordText.isEmpty()){
+                    username.setError("Username is required");
+                    username.requestFocus();
+                    name.setError("Name is required");
+                    name.requestFocus();
+                    surname.setError("Surname is required");
+                    surname.requestFocus();
+                    password.setError("Password is required");
+                }
+                else if(usernameText.isEmpty()){
+                    username.setError("Username is required");
+                    username.requestFocus();
+                    return;
+                }
+                if(nameText.isEmpty()){
+                    name.setError("Name is required");
+                    name.requestFocus();
+                    return;
+                }
+                if(surnameText.isEmpty()){
+                    surname.setError("Surname is required");
+                    surname.requestFocus();
+                    return;
+                }
+                if(passwordText.isEmpty()){
+                    password.setError("Password is required");
+                    password.requestFocus();
+                    return;
+                }
+                if(passwordText.length() < 8){
+                    password.setError("Password must be at least 8");
+                    password.requestFocus();
+                    return;
+                }
+
                 String task = "register";
                 BackgroundTask backgroundTask = new BackgroundTask(Register.this);
                 backgroundTask.execute(task, usernameText, nameText, surnameText, passwordText);

@@ -1,13 +1,11 @@
 package com.example.restaurantorderapp;
 
-
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.util.Log;
-
 import android.support.v7.app.AppCompatActivity;
 
 import org.json.JSONObject;
@@ -20,7 +18,8 @@ import java.net.URL;
 
 public class AddOrder extends AppCompatActivity {
 
-    EditText etRestaurant, etCustomerName, etCustomerSurname, etStaffId;
+    EditText etRestaurant, etCustomerName, etCustomerSurname;
+    int staffId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,21 +29,28 @@ public class AddOrder extends AppCompatActivity {
         etRestaurant = findViewById(R.id.etRestaurant);
         etCustomerName = findViewById(R.id.etCustomerName);
         etCustomerSurname = findViewById(R.id.etCustomerSurname);
-        etStaffId = findViewById(R.id.etStaffId);
+
+        staffId = getIntent().getIntExtra("STAFF_ID", -1);
+
+        Log.d("AddOrder", "Received STAFF_ID: " + staffId);
+
+        if (staffId == -1) {
+            Toast.makeText(this, "Error: Staff ID not passed!", Toast.LENGTH_LONG).show();
+            finish();
+        }
     }
 
     public void addOrder(View view) {
         String restaurant = etRestaurant.getText().toString().trim();
         String customerName = etCustomerName.getText().toString().trim();
         String customerSurname = etCustomerSurname.getText().toString().trim();
-        String staffId = etStaffId.getText().toString().trim();
 
-        if (restaurant.isEmpty() || customerName.isEmpty() || customerSurname.isEmpty() || staffId.isEmpty()) {
+        if (restaurant.isEmpty() || customerName.isEmpty() || customerSurname.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        new AddOrderTask().execute(customerName,customerSurname,staffId,restaurant);
+        new AddOrderTask().execute(customerName, customerSurname, String.valueOf(staffId), restaurant);
     }
 
     private class AddOrderTask extends AsyncTask<String, Void, String> {
@@ -83,14 +89,6 @@ public class AddOrder extends AppCompatActivity {
 
                 Log.d("AddOrderTask", "Response: " + response.toString());
                 return response.toString();
-
-                /// ///
-                /*int responseCode = conn.getResponseCode();
-                if (responseCode == HttpURLConnection.HTTP_OK) {
-                    return "Order added successfully!";
-                } else {
-                    return "Failed to add order (Code: " + responseCode + ")";
-                }*/
 
             } catch (Exception e) {
                 Log.e("AddOrderTask", "Exception occurred", e);
