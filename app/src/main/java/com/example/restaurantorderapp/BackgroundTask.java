@@ -1,10 +1,10 @@
 package com.example.restaurantorderapp;
 
-import android.app.AlertDialog;
-import android.content.Intent;
-import android.os.AsyncTask;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
+import android.support.v7.app.AlertDialog;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
